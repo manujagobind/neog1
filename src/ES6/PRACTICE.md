@@ -73,7 +73,7 @@ Mentor = Neog[2];
 
 ```js
 const Neog = ["Tanvi", "Swap", "Tanay", "MA", "CA", "PA", "TA"],
-    [CEO, _, Mentor] = Neog;
+    [CEO, , Mentor] = Neog;
 ```
 
 Note: revisit, is there a better way?
@@ -93,7 +93,7 @@ console.log(surname);
 ```js
 const arr = ["MA", "TA", "PA", "CA"];
 
-[firstName, surname] = arr;
+const [firstName, surname] = arr;
 
 console.log(firstName);
 console.log(surname);
@@ -143,8 +143,27 @@ var arithmeticsObj = {
 
 ```js
 const arithmeticsObj = {
-    sum: (num1, num2) => num1 + num2,
-    multiply: (num1, num2) => num1 * num2
+    sum: function (num1, num2) {
+      return num1 + num2
+    },
+    multiply: function (num1, num2) {
+      return num1 * num2
+    }
+}
+```
+
+Note: It's generally not recommended to use arrow functions within an object. ```this``` in arrow function within an object binds to the Window object (if run on browser). Traditional functions bind to the object itself.
+
+```js
+const arithmeticsObj = {
+    sum: (n1, n2) => {
+        console.log(this, "from sum"); // this binds to Window object
+        return n1 + n2;
+    },
+    multiply: function multiply(n1, n2) {
+        console.log(this, "from multiply"); // this binds to the current object
+        return n1 * n2;
+    }
 }
 ```
 
@@ -186,11 +205,13 @@ packIt(1,2,3,5,5)
 
 ```js
 function packIt() {
-    console.log(arguments)
+    let args = [];
+    for (let item of arguments) {
+      args.push(item);
+    }
+    console.log(args)
 }
 ```
-
-Note: revisit - is there a better way than using ```arguments```?
 
 ___
 
@@ -222,5 +243,15 @@ console.log(aloo)
 
 _Syntax Error (aloo has already been declared)_
 
-Reasoning: aloo is used twice as a variable
+Reasoning: aloo is used twice as a variable. ```const``` and ```let``` don't allow us to re-declare a variable but ```var``` does. We would have not seen the error with ```var```. 
 ___
+
+## Othe notes
+
+```js
+const a = 1;
+
+a === 1 ? b = 5 : c = 10;
+console.log(b);
+console.log(c);
+```
