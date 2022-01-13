@@ -253,5 +253,185 @@ const a = 1;
 
 a === 1 ? b = 5 : c = 10;
 console.log(b);
-console.log(c);
+console.log(c); // error: c is not defined
 ```
+
+## Interview practice session
+
+```js
+function consoleNum() {
+
+    var isWorkshop = true;
+    var num = 10;
+
+    if (isWorkshop) {
+        let num = 20;
+        console.log(num);
+    }
+    
+    console.log(num);
+}
+
+consoleNum();
+```
+
+20<br>
+10
+
+Reasoning: there won't be a syntax error with `let num = 20` as it's in a different scope.
+
+---
+
+```js
+function sum(a, b) {
+    return a + b;
+}
+
+console.log(sum(1, '2'));
+```
+
+12
+
+Reasoning: adding a string to a number leads to concatenation
+
+---
+
+```js
+function sum(a, b) {
+    return a + b;
+}
+
+console.log(sum(5, true));
+```
+
+6
+
+---
+
+TODO: Explain hoisting and TDZ.
+
+---
+
+What's the difference b/w `===` and `==`?
+
+```js
+let a = null;
+let b;
+
+console.log(a == b);
+console.log(a === b);
+```
+
+true<br>
+false
+
+== compares the value, === compares the value as well as type
+
+---
+
+TODO: Why is the type of null an object?
+
+```js
+console.log(typeof null);    // object
+console.log(typeof undefined);    // undefined
+```
+
+---
+
+```js
+{
+    var a = 2;
+    var a = 3;
+    console.log(a);
+}
+
+{
+    let b = 10;
+    let b = 20;
+    console.log(b);
+}
+```
+
+3<br>
+Syntax Error: Identifier 'b' has already been declared.
+
+___
+
+TODO: What are the differences b/w `var` and `let`?
+
+---
+
+```js
+const myData = { name: "Akanksha", hobby: "Painting" };
+myData.name = "Tanay";
+
+console.log(myData);
+
+myData = { name: "Tanay", hobby: "Cracking PJs" }
+console.log(myData);
+```
+
+{ name: "Tanay", hobby: "Painting" }<br>
+TypeError: Assignment to a constant variable.
+
+---
+
+Spread operator
+
+```js
+let arr1 = [4, 5, 6];
+// convert to [1, 2, 3, 4, 5, 6, 7, 8]
+```
+
+```js
+arr1 = [1, 2, 3, ...arr1, 7, 8];
+```
+
+---
+
+```js
+let a = [..."apple"];
+console.log(a)
+```
+
+[ 'a', 'b', 'c', 'd', 'e' ]
+
+---
+
+```js
+var arr1 = [1, 2];
+var arr2 = [arr1, [3, 4]];
+var arr3 = [...arr2, [7, 8]];
+
+console.log(arr2);
+console.log(arr3);
+```
+
+[ [1, 2], [3, 4] ]<br>
+[ [1, 2], [3, 4], [7, 8]]
+
+---
+
+Destructuring
+
+```js
+var a = 1, b = 2;
+// convert to es6
+```
+
+```js
+const [a, b] = [1, 2];
+```
+
+---
+
+```js
+var a = 1, b = 2;
+// swap a and b
+```
+
+```js
+[a, b] = [b, a];
+```
+
+---
