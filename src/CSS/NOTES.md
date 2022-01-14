@@ -12,11 +12,8 @@
 - _Fixed positioning_ is similar to absolute positioning except that it usually fixes an element in place relative to the visible portion of the viewport.
 - _Sticky positioning_ allows a positioned element to act like its relatively positioned until its scrolled to a certain threashold. It can be used, for example, to cause a navigation bar to scroll with the page until a certain point and then stick to the top of the page.
 
-## Flexbox
-
-
-
 ## References
 
 - [Positioning - MDN Docs](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning)
 - [Flexbox - MDN Docs](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+- [Grid - CSS Tricks](https://css-tricks.com/getting-started-css-grid/)
