@@ -12,8 +12,14 @@
 - _Fixed positioning_ is similar to absolute positioning except that it usually fixes an element in place relative to the visible portion of the viewport.
 - _Sticky positioning_ allows a positioned element to act like its relatively positioned until its scrolled to a certain threashold. It can be used, for example, to cause a navigation bar to scroll with the page until a certain point and then stick to the top of the page.
 
+## Mobile First Design
+
+- A common approach when using media queries is to create a simple single column layout for narrow screen devices (e.g. mobile phones), then check for larger screens and implement a multiple-column layout when you know you have enough screen width to handle it.
+- Use of flexible grid.
+
 ## References
 
 - [Positioning - MDN Docs](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning)
 - [Flexbox - MDN Docs](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 - [Grid - CSS Tricks](https://css-tricks.com/getting-started-css-grid/)
+- [Responsive Design - MDN Docs](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
