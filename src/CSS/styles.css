@@ -1,0 +1,39 @@
+body {
+    width: 60%;
+    margin: 0 auto;
+}
+
+p {
+    border: 2px solid green;
+    padding: 0.5rem;
+}
+
+.static-position {
+    position: static;
+    background-color: yellow;
+}
+
+.relative-position {
+    position: relative;
+    left: 3rem;
+    top: 2rem;
+    background-color: aqua;
+}
+
+.absolute-position {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color:beige;
+}
+
+.fixed-position {
+    position: fixed;
+}
+
+.sticky-position {
+    position: sticky;
+    top: 1rem;
+    left: 2rem;
+    background-color: pink;
+}
