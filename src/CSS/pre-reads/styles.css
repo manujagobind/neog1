@@ -3,9 +3,10 @@ body {
     margin: 0 auto;
 }
 
-p {
+.text {
+    padding: 1rem;
+    margin: 1rem;
     border: 2px solid green;
-    padding: 0.5rem;
 }
 
 .static-position {
@@ -29,6 +30,8 @@ p {
 
 .fixed-position {
     position: fixed;
+    right: 0;
+    background-color: chartreuse;
 }
 
 .sticky-position {
@@ -36,4 +39,32 @@ p {
     top: 1rem;
     left: 2rem;
     background-color: pink;
+}
+
+header {
+    padding: 1rem;
+    background-color: cadetblue;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-space-around {
+    justify-content: space-around;
+}
+
+article {
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: antiquewhite;
+    flex: 1;
+}
+
+button:first-child {
+    order: 1;
 }
